@@ -85,9 +85,9 @@ static CGSize kLTSThumbImageSize;
     [allPhotoResults enumerateObjectsUsingBlock:^(PHAsset *  _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
         void (^requestManagerHandler)(UIImage * _Nullable result, NSDictionary * _Nullable info) = ^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             [images addObject:result];
+            i++;
         };
         [[LTSPhotoLibrary imageManager] requestImageForAsset:asset targetSize:kLTSThumbImageSize contentMode:PHImageContentModeAspectFill options:nil resultHandler:requestManagerHandler];
-        i++;
         LTSInfo(@"%d", i);
         if (i == allPhotoResults.count) {
             dispatch_semaphore_signal(semaphore);
