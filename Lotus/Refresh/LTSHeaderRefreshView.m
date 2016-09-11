@@ -37,12 +37,12 @@
                       ofObject:(id)object
                         change:(NSDictionary<NSString *,id> *)change
                        context:(void *)context {
-    NSLog(@"%f", self.scrollView.contentOffset.y);
     
-    CGFloat rate = (-self.scrollView.contentOffset.y)/150.0;
+    CGFloat rate = (-self.scrollView.contentOffset.y)/100.0;
+    CGFloat radius = 15;
     
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width/4.0+20, self.frame.size.height/2.0)
-                                                        radius:20
+                                                        radius:radius
                                                     startAngle:0
                                                       endAngle:M_PI*2*rate
                                                      clockwise:YES];
