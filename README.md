@@ -1,6 +1,8 @@
 # Lotus
 
-Lotus is an UI framework, which contains HUD, drag down refresh and other UI components. It provides an easy way for developer to use in projects.
+Lotus is an UI framework, which contains HUD, refresh View and other UI components. It intends that providing an easy way for developing, and giving people a sense of beauty when using it.
+
+Simple, but beautiful.
 
 # Structure
 ## HUD
