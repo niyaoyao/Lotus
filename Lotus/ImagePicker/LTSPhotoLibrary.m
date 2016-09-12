@@ -79,21 +79,13 @@ static CGSize kLTSThumbImageSize;
     allPhotosOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
     PHFetchResult *allPhotoResults = [PHAsset fetchAssetsWithOptions:allPhotosOptions];
     LTSInfo(@"%@", allPhotoResults);
-    __block NSMutableArray *images = [NSMutableArray array];
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    __block int i = 0;
+    NSMutableArray *images = [NSMutableArray array];
     [allPhotoResults enumerateObjectsUsingBlock:^(PHAsset *  _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
         void (^requestManagerHandler)(UIImage * _Nullable result, NSDictionary * _Nullable info) = ^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             [images addObject:result];
-            i++;
         };
         [[LTSPhotoLibrary imageManager] requestImageForAsset:asset targetSize:kLTSThumbImageSize contentMode:PHImageContentModeAspectFill options:nil resultHandler:requestManagerHandler];
-        LTSInfo(@"%d", i);
-        if (i == allPhotoResults.count) {
-            dispatch_semaphore_signal(semaphore);
-        }
-    }];
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+     }];
     LTSInfo(@"%@", images);
 }
 
