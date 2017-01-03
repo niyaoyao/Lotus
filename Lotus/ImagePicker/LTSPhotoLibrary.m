@@ -78,7 +78,7 @@ static CGSize kLTSThumbImageSize;
     PHFetchOptions *allPhotosOptions = [[PHFetchOptions alloc] init];
     allPhotosOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
     PHFetchResult *allPhotoResults = [PHAsset fetchAssetsWithOptions:allPhotosOptions];
-    LTSInfo(@"%@", allPhotoResults);
+    LTSLog(@"%@", allPhotoResults);
     NSMutableArray *images = [NSMutableArray array];
     [allPhotoResults enumerateObjectsUsingBlock:^(PHAsset *  _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
         void (^requestManagerHandler)(UIImage * _Nullable result, NSDictionary * _Nullable info) = ^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
@@ -86,7 +86,7 @@ static CGSize kLTSThumbImageSize;
         };
         [[LTSPhotoLibrary imageManager] requestImageForAsset:asset targetSize:kLTSThumbImageSize contentMode:PHImageContentModeAspectFill options:nil resultHandler:requestManagerHandler];
      }];
-    LTSInfo(@"%@", images);
+    LTSLog(@"%@", images);
 }
 
 @end

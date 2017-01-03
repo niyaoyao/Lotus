@@ -6,15 +6,11 @@
 //  Copyright © 2016 SuneBearNi. All rights reserved.
 //
 
-#ifndef LTSMacro_h
-#define LTSMacro_h
-
 #ifdef DEBUG
-#define LTSInfo(...) NSLog(@"%s \n%@", __PRETTY_FUNCTION__, [NSString stringWithFormat:__VA_ARGS__]);
+#define LTSLog(...) NSLog(@"%s \n%@", __PRETTY_FUNCTION__, [NSString stringWithFormat:__VA_ARGS__]);
 
 #else
-#define LTSInfo(...) ;
+#define LTSLog(...) ;
 
 #endif
 
-#endif /* LTSMacro_h */

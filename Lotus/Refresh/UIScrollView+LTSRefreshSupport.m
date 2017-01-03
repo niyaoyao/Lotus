@@ -18,9 +18,9 @@ static const void *kLTSRefreshFooterKey = &kLTSRefreshFooterKey;
 
 #pragma mark - Property
 - (void)setHeaderRefreshAction:(void (^)())action {
-    if (!self.header) {
+    if (!self.headerView) {
         LTSHeaderRefreshView *headerView = [[LTSHeaderRefreshView alloc] init];
-        self.header = headerView;
+        self.headerView = headerView;
     }
 }
 
@@ -28,15 +28,13 @@ static const void *kLTSRefreshFooterKey = &kLTSRefreshFooterKey;
     
 }
 
-- (void)setHeader:(LTSHeaderRefreshView *)header {
+- (void)setHeaderView:(LTSHeaderRefreshView *)header {
     objc_setAssociatedObject(self, &kLTSRefreshHeaderKey, header, OBJC_ASSOCIATION_ASSIGN);
     [self addSubview:header];
 }
 
-- (LTSHeaderRefreshView *)header {
+- (LTSHeaderRefreshView *)headerView {
     return objc_getAssociatedObject(self, &kLTSRefreshHeaderKey);
 }
-
-
 
 @end
