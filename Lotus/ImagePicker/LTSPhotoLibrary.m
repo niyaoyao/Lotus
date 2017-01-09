@@ -14,7 +14,8 @@ static CGSize kLTSThumbImageSize;
 
 @interface LTSPhotoLibrary ()
 
-@property (nonatomic, copy  ) NSArray               *fetchedPhotos;
+@property (nonatomic, copy) NSArray *fetchedPhotos;
+@property (nonatomic, copy) LTSPhotoLibraryFetchAllPhotosCompletion completion;
 
 @end
 
@@ -57,6 +58,7 @@ static CGSize kLTSThumbImageSize;
 
 - (void)fetchAllPhotosCompletion:(LTSPhotoLibraryFetchAllPhotosCompletion)completion {
     __weak typeof(self) weakSelf = self;
+    self.completion = completion;
     dispatch_async([LTSPhotoLibrary photoQueue], ^{
         PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
         switch (status) {
@@ -66,9 +68,13 @@ static CGSize kLTSThumbImageSize;
                 break;
             case PHAuthorizationStatusDenied:
             case PHAuthorizationStatusNotDetermined:
-                
-                break;
-            default:
+                [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+                    if (status == PHAuthorizationStatusAuthorized || status == PHAuthorizationStatusRestricted) {
+                        [weakSelf fetchPhotosWhenAuthorized];
+                    } else {
+                        LTSLog(@"PHAuthorizationStatusDenied");
+                    }
+                }];
                 break;
         }
     });
@@ -87,6 +93,9 @@ static CGSize kLTSThumbImageSize;
         [[LTSPhotoLibrary imageManager] requestImageForAsset:asset targetSize:kLTSThumbImageSize contentMode:PHImageContentModeAspectFill options:nil resultHandler:requestManagerHandler];
      }];
     LTSLog(@"%@", images);
+    if (self.completion) {
+        self.completion(LTSPhotoLibraryAuthorizationStatusAuthorized, images, nil);
+    }
 }
 
 @end

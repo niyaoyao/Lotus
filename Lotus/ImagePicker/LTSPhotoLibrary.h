@@ -14,9 +14,10 @@ static const char * kLTSPhotoQueueLabel = "com.sunebear.nycode.photo.queue";
 
 typedef NS_ENUM(NSInteger, LTSPhotoLibraryType) {
     LTSPhotoLibraryAuthorizationStatusNotDetermined,
+    LTSPhotoLibraryAuthorizationStatusAuthorized,
 };
 
-typedef void (^LTSPhotoLibraryFetchAllPhotosCompletion)(LTSPhotoLibraryType type, NSArray * _Nullable images);
+typedef void (^LTSPhotoLibraryFetchAllPhotosCompletion)(LTSPhotoLibraryType type, NSArray * _Nullable images, NSError * _Nullable error);
 
 @interface LTSPhotoLibrary : NSObject
 

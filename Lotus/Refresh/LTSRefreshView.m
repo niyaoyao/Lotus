@@ -31,7 +31,9 @@
         
         self.scrollView = (UIScrollView *)newSuperview;
         self.scrollView.alwaysBounceVertical = YES;
+#ifdef DEBUG
         self.backgroundColor = [UIColor blueColor];
+#endif
         self.frame = [self rectWithFrame:CGRectMake(0, kRefreshViewY,
                                                     self.scrollView.frame.size.width,
                                                     kRefreshViewHeight)];

@@ -7,4 +7,5 @@
 //
 
 #import "LTSMacro.h"
+#import "LTSPhotoLibrary.h"
 #import "UIScrollView+LTSRefreshSupport.h"
