@@ -11,6 +11,8 @@ Hover View
 ## Refresh
 Refresh Component
 
+## Images Explorer
+
 ## Image Picker
 
 # Licence
