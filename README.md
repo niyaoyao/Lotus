@@ -17,7 +17,12 @@ Lotus is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "Lotus"
+source 'git@github.com:niyaoyao/LotusSpec.git'
+platform :ios, '8.0' 
+target 'project-target-name' do
+pod 'Lotus'
+
+end
 ```
 
 ## Author
