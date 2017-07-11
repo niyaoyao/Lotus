@@ -11,6 +11,8 @@ Hover View
 ## Refresh
 Refresh Component
 
+## Action Sheet
+
 ## Images Explorer
 
 ## Image Picker
