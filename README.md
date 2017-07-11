@@ -9,6 +9,7 @@ Simple, but beautiful.
 Hover View
 
 ## Refresh
+Refresh ScrollView
 
 ## Image Picker
 
