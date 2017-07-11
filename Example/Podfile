@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Lotus_Example' do
+  pod 'Lotus', :path => '../'
+
+  target 'Lotus_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

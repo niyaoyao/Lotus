@@ -1,0 +1,6 @@
+framework module Lotus {
+  umbrella header "Lotus-umbrella.h"
+
+  export *
+  module * { export * }
+}

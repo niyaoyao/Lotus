@@ -1,0 +1,23 @@
+{
+  "name": "Lotus",
+  "version": "0.1.0",
+  "summary": "A short description of Lotus.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/niyaoyao/Lotus",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "niyaoyao": "ny.sunebear@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/niyaoyao/Lotus.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Lotus/Classes/**/*",
+  "public_header_files": "Lotus/Classes/**/*.h"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - Lotus (0.1.0)
+
+DEPENDENCIES:
+  - Lotus (from `../`)
+
+EXTERNAL SOURCES:
+  Lotus:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Lotus: 2cf3f797b15a36607ab1757159c3574be7b03a19
+
+PODFILE CHECKSUM: d56baa54e1b9d30d65a5772f628792b7545d91ac
+
+COCOAPODS: 1.2.1

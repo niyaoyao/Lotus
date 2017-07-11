@@ -1,0 +1,809 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03C2079F54E02FAA96CB6288CE6F304B /* LTSRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A42C74B26857046988E47B8A973E61 /* LTSRefreshView.m */; };
+		0643F98E8E10F6D57FCA8298FAC06321 /* Lotus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45F3AD637FEAB7786732D46B606FD491 /* Lotus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A5E5713F9B326FD9E0F3502B8C33CF /* LTSRefreshView.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE1E53895F9AA33C71F50993B78E3C8 /* LTSRefreshView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13415D859B6D40E7D2ACE51EB8AE79C6 /* Pods-Lotus_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 063C8867E93E0A85015136FB0195B77A /* Pods-Lotus_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14791292F401934CA46CA27C1442183D /* LTSPhotoLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A080AA40EAEC689BA31FEEE12E4886 /* LTSPhotoLibrary.m */; };
+		1D1FBA91E6D51CB044FF1A5B8E2D3B53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1EE3EDEC351E35EF4CD2562F1FBCAEFE /* UIScrollView+LTSRefreshSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = E0C8C4C4EA1B71916404BAE4080396CB /* UIScrollView+LTSRefreshSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E86C2BC26135F782EC65E749354B00A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		2EEC28EF68FB7950EA3D74D5819AF40A /* Lotus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 558EE6422519DDDE593746316DA71A26 /* Lotus-dummy.m */; };
+		2FED11994FCE60C0A045EC43FC704ECE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 42C8D958431B3FB5110757060E6F63B5 /* README.md */; };
+		31584D4C968EC231E42FA56BF79A8192 /* LTSHeaderRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = A461FFCBCB09B29906B220D353F6929A /* LTSHeaderRefreshView.m */; };
+		3A158D30EADDC046B0732F779FA3B882 /* Lotus.h in Headers */ = {isa = PBXBuildFile; fileRef = 11A0F50DF7C7E7048784EBF6ABA87E68 /* Lotus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43F8013B53D3722039DB4058F904F724 /* Pods-Lotus_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD41327ECC1DA59D9662E5CBD7E86F11 /* Pods-Lotus_Example-dummy.m */; };
+		4E8F1C6DD8F6D2BB66C21196D6630CC6 /* LotusHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC37684FE92A1A6078836B186CE2EC1 /* LotusHUD.m */; };
+		63072F474A5009E814FC8AB138703D8F /* UIView+LTSSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E18C2BE2FF64857D2293B2784F0A673 /* UIView+LTSSupport.m */; };
+		6B9BA5F5905DCC9829D7B909C3FE7989 /* Pods-Lotus_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8F21CA52F415DE2B7B8B5D1933A88AA /* Pods-Lotus_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		752CBBEBA592E6FD2C75478B04B00F92 /* UIView+LTSSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E297F6848F9E6C2CBE0ABF481837651 /* UIView+LTSSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA94FE41CD9B02A12BF9562A23FEF2A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		C71D7767F0C5A3E0B72789FA4B34A50A /* LTSHeaderRefreshView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E35692D77802005377F484AD29A8052 /* LTSHeaderRefreshView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D235B2001EF82D63BE7F2882598D1310 /* LTSPhotoLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 445BD4BE8100EA01C156F9A79B915F03 /* LTSPhotoLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D947035E4E5C633CEBFA1605CADD1E1D /* LotusHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AE66FD1A7116E597ED0A0C1FAEBD273 /* LotusHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAB42D70BF1F79F303F4E0977E925194 /* LTSMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = DF869D13533A5E41746B1D9A7B4996AA /* LTSMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E15BA71EF7361C48A0AAA769542877B5 /* Pods-Lotus_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A591B4C6EB88ADFC7A75FEB63A5A31 /* Pods-Lotus_Tests-dummy.m */; };
+		FBA127C9C6B7C0CEFDBBC6D02DCAC901 /* UIScrollView+LTSRefreshSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CB2B272FA9EBC4C274531FB00D325E /* UIScrollView+LTSRefreshSupport.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7F8886B9C49A465E20018D7F4FBCE69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CC5488EC3B0FF4938A60E784B115B6F;
+			remoteInfo = Lotus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		063C8867E93E0A85015136FB0195B77A /* Pods-Lotus_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Lotus_Example-umbrella.h"; sourceTree = "<group>"; };
+		11A0F50DF7C7E7048784EBF6ABA87E68 /* Lotus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Lotus.h; sourceTree = "<group>"; };
+		16FFC1CB8E99546104F82D29098D9CC6 /* Pods-Lotus_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Lotus_Tests.modulemap"; sourceTree = "<group>"; };
+		191DDB62C97D4FBCF2AC0C8D7342056E /* Lotus-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Lotus-prefix.pch"; sourceTree = "<group>"; };
+		287A526CB10BB420DBCF1159AE010BB7 /* Pods-Lotus_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Lotus_Example-resources.sh"; sourceTree = "<group>"; };
+		2E297F6848F9E6C2CBE0ABF481837651 /* UIView+LTSSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+LTSSupport.h"; sourceTree = "<group>"; };
+		30A080AA40EAEC689BA31FEEE12E4886 /* LTSPhotoLibrary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LTSPhotoLibrary.m; sourceTree = "<group>"; };
+		397E30850EC7D3CF6C49A547E729C247 /* Pods-Lotus_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Lotus_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		417A067F10DD8D8DD8DA35C798740628 /* Lotus.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Lotus.xcconfig; sourceTree = "<group>"; };
+		41C8355B87C814DAE45130AAC7976EA1 /* Pods-Lotus_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lotus_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		42C8D958431B3FB5110757060E6F63B5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		445BD4BE8100EA01C156F9A79B915F03 /* LTSPhotoLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LTSPhotoLibrary.h; sourceTree = "<group>"; };
+		45F3AD637FEAB7786732D46B606FD491 /* Lotus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Lotus-umbrella.h"; sourceTree = "<group>"; };
+		4724E604B834503224A46CE8A2B0F4D0 /* Pods-Lotus_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lotus_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4819D19572455EEF69C7145F5DEE861A /* Lotus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Lotus.modulemap; sourceTree = "<group>"; };
+		4E18C2BE2FF64857D2293B2784F0A673 /* UIView+LTSSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+LTSSupport.m"; sourceTree = "<group>"; };
+		558EE6422519DDDE593746316DA71A26 /* Lotus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Lotus-dummy.m"; sourceTree = "<group>"; };
+		6165744738B1605BA460B881B2946F04 /* Pods_Lotus_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Lotus_Tests.framework; path = "Pods-Lotus_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63CA2D3307352ED643EE951601E0940C /* Pods-Lotus_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lotus_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6777E3711C54D4B197B29900CF144406 /* Pods-Lotus_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lotus_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6DCC744063DF8254D5F0E3E323AACCA3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73A591B4C6EB88ADFC7A75FEB63A5A31 /* Pods-Lotus_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Lotus_Tests-dummy.m"; sourceTree = "<group>"; };
+		75A42C74B26857046988E47B8A973E61 /* LTSRefreshView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LTSRefreshView.m; sourceTree = "<group>"; };
+		7A4F54D1BF83D39A811B129D80323E3A /* Pods-Lotus_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Lotus_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7E870CD663C255D58CBF5A8246DAFEC3 /* Pods-Lotus_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Lotus_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		84CB2B272FA9EBC4C274531FB00D325E /* UIScrollView+LTSRefreshSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+LTSRefreshSupport.m"; sourceTree = "<group>"; };
+		8AE66FD1A7116E597ED0A0C1FAEBD273 /* LotusHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LotusHUD.h; sourceTree = "<group>"; };
+		8AFC11F89034AB90FA7EA770509DE221 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C78AC12358DD7983E8F2397FC1E5091 /* Pods_Lotus_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Lotus_Example.framework; path = "Pods-Lotus_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E35692D77802005377F484AD29A8052 /* LTSHeaderRefreshView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LTSHeaderRefreshView.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A461FFCBCB09B29906B220D353F6929A /* LTSHeaderRefreshView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LTSHeaderRefreshView.m; sourceTree = "<group>"; };
+		B96534AEFEC633F2263F92A46881F04D /* Pods-Lotus_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Lotus_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BAA438CFB342D30A72506F3B77F735E1 /* Pods-Lotus_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Lotus_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C8F21CA52F415DE2B7B8B5D1933A88AA /* Pods-Lotus_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Lotus_Tests-umbrella.h"; sourceTree = "<group>"; };
+		CA434650D4EF50183ED51583713E1169 /* Pods-Lotus_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Lotus_Example.modulemap"; sourceTree = "<group>"; };
+		CD41327ECC1DA59D9662E5CBD7E86F11 /* Pods-Lotus_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Lotus_Example-dummy.m"; sourceTree = "<group>"; };
+		D022E33F9A65AFA59665C31A1F656ED0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD31C34C6E1EFDA86F770A96B50B4A73 /* Pods-Lotus_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Lotus_Example-frameworks.sh"; sourceTree = "<group>"; };
+		DF869D13533A5E41746B1D9A7B4996AA /* LTSMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LTSMacro.h; sourceTree = "<group>"; };
+		E0C8C4C4EA1B71916404BAE4080396CB /* UIScrollView+LTSRefreshSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+LTSRefreshSupport.h"; sourceTree = "<group>"; };
+		EA24C7CF9725088084EDFC08D5570931 /* Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Lotus.framework; path = Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE1E53895F9AA33C71F50993B78E3C8 /* LTSRefreshView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LTSRefreshView.h; sourceTree = "<group>"; };
+		F1ABE190A3DB5885E2A7351704CA5934 /* Pods-Lotus_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Lotus_Tests-resources.sh"; sourceTree = "<group>"; };
+		FFC37684FE92A1A6078836B186CE2EC1 /* LotusHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LotusHUD.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1877C5FA5CA5533D8E6E803031AC5D8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D1FBA91E6D51CB044FF1A5B8E2D3B53 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C11F77FA1EAEB2CC357FC45AD65CF49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E86C2BC26135F782EC65E749354B00A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A525D0402E59CC369C0D562D6746C53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA94FE41CD9B02A12BF9562A23FEF2A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03E177B19189AD8429A62AA897889936 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D672C00074E77BDD8D4FE30B55079C62 /* Lotus */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		05E385C895F64157E0A6BA93F70CB28A /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				445BD4BE8100EA01C156F9A79B915F03 /* LTSPhotoLibrary.h */,
+				30A080AA40EAEC689BA31FEEE12E4886 /* LTSPhotoLibrary.m */,
+			);
+			name = ImagePicker;
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		377EB216997A785A6A1A6D58F8B0C3DD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DCC744063DF8254D5F0E3E323AACCA3 /* Info.plist */,
+				4819D19572455EEF69C7145F5DEE861A /* Lotus.modulemap */,
+				417A067F10DD8D8DD8DA35C798740628 /* Lotus.xcconfig */,
+				558EE6422519DDDE593746316DA71A26 /* Lotus-dummy.m */,
+				191DDB62C97D4FBCF2AC0C8D7342056E /* Lotus-prefix.pch */,
+				45F3AD637FEAB7786732D46B606FD491 /* Lotus-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Lotus";
+			sourceTree = "<group>";
+		};
+		6B40F929392D75B3333C7B58D2F7DF36 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				11A0F50DF7C7E7048784EBF6ABA87E68 /* Lotus.h */,
+				DF869D13533A5E41746B1D9A7B4996AA /* LTSMacro.h */,
+				DCAE33DB341E8404904948B44C7989A7 /* Alert */,
+				EA0D3A89F532BFE9AED7FDCE497F65EE /* HUD */,
+				05E385C895F64157E0A6BA93F70CB28A /* ImagePicker */,
+				F5B577D7E5D7AF848852A3BADC7E142C /* Refresh */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				03E177B19189AD8429A62AA897889936 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				A32FAD01E7B9DD9E79BE155918B50851 /* Products */,
+				973F3558F0AA5107F9CB19C9FC75D532 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		973F3558F0AA5107F9CB19C9FC75D532 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B19E90BB0EBD1B37703033D6544F019D /* Pods-Lotus_Example */,
+				EB06E774C306EE623FCFD166CD436D58 /* Pods-Lotus_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A32FAD01E7B9DD9E79BE155918B50851 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA24C7CF9725088084EDFC08D5570931 /* Lotus.framework */,
+				8C78AC12358DD7983E8F2397FC1E5091 /* Pods_Lotus_Example.framework */,
+				6165744738B1605BA460B881B2946F04 /* Pods_Lotus_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B19E90BB0EBD1B37703033D6544F019D /* Pods-Lotus_Example */ = {
+			isa = PBXGroup;
+			children = (
+				8AFC11F89034AB90FA7EA770509DE221 /* Info.plist */,
+				CA434650D4EF50183ED51583713E1169 /* Pods-Lotus_Example.modulemap */,
+				397E30850EC7D3CF6C49A547E729C247 /* Pods-Lotus_Example-acknowledgements.markdown */,
+				BAA438CFB342D30A72506F3B77F735E1 /* Pods-Lotus_Example-acknowledgements.plist */,
+				CD41327ECC1DA59D9662E5CBD7E86F11 /* Pods-Lotus_Example-dummy.m */,
+				DD31C34C6E1EFDA86F770A96B50B4A73 /* Pods-Lotus_Example-frameworks.sh */,
+				287A526CB10BB420DBCF1159AE010BB7 /* Pods-Lotus_Example-resources.sh */,
+				063C8867E93E0A85015136FB0195B77A /* Pods-Lotus_Example-umbrella.h */,
+				63CA2D3307352ED643EE951601E0940C /* Pods-Lotus_Example.debug.xcconfig */,
+				6777E3711C54D4B197B29900CF144406 /* Pods-Lotus_Example.release.xcconfig */,
+			);
+			name = "Pods-Lotus_Example";
+			path = "Target Support Files/Pods-Lotus_Example";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D672C00074E77BDD8D4FE30B55079C62 /* Lotus */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8D97F73E3F1E048B6EB0F8E31B44D /* Lotus */,
+				377EB216997A785A6A1A6D58F8B0C3DD /* Support Files */,
+			);
+			name = Lotus;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		DCAE33DB341E8404904948B44C7989A7 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				42C8D958431B3FB5110757060E6F63B5 /* README.md */,
+			);
+			name = Alert;
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		EA0D3A89F532BFE9AED7FDCE497F65EE /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				8AE66FD1A7116E597ED0A0C1FAEBD273 /* LotusHUD.h */,
+				FFC37684FE92A1A6078836B186CE2EC1 /* LotusHUD.m */,
+			);
+			name = HUD;
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		EB06E774C306EE623FCFD166CD436D58 /* Pods-Lotus_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D022E33F9A65AFA59665C31A1F656ED0 /* Info.plist */,
+				16FFC1CB8E99546104F82D29098D9CC6 /* Pods-Lotus_Tests.modulemap */,
+				7A4F54D1BF83D39A811B129D80323E3A /* Pods-Lotus_Tests-acknowledgements.markdown */,
+				B96534AEFEC633F2263F92A46881F04D /* Pods-Lotus_Tests-acknowledgements.plist */,
+				73A591B4C6EB88ADFC7A75FEB63A5A31 /* Pods-Lotus_Tests-dummy.m */,
+				7E870CD663C255D58CBF5A8246DAFEC3 /* Pods-Lotus_Tests-frameworks.sh */,
+				F1ABE190A3DB5885E2A7351704CA5934 /* Pods-Lotus_Tests-resources.sh */,
+				C8F21CA52F415DE2B7B8B5D1933A88AA /* Pods-Lotus_Tests-umbrella.h */,
+				41C8355B87C814DAE45130AAC7976EA1 /* Pods-Lotus_Tests.debug.xcconfig */,
+				4724E604B834503224A46CE8A2B0F4D0 /* Pods-Lotus_Tests.release.xcconfig */,
+			);
+			name = "Pods-Lotus_Tests";
+			path = "Target Support Files/Pods-Lotus_Tests";
+			sourceTree = "<group>";
+		};
+		F5B577D7E5D7AF848852A3BADC7E142C /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				8E35692D77802005377F484AD29A8052 /* LTSHeaderRefreshView.h */,
+				A461FFCBCB09B29906B220D353F6929A /* LTSHeaderRefreshView.m */,
+				EDE1E53895F9AA33C71F50993B78E3C8 /* LTSRefreshView.h */,
+				75A42C74B26857046988E47B8A973E61 /* LTSRefreshView.m */,
+				E0C8C4C4EA1B71916404BAE4080396CB /* UIScrollView+LTSRefreshSupport.h */,
+				84CB2B272FA9EBC4C274531FB00D325E /* UIScrollView+LTSRefreshSupport.m */,
+				2E297F6848F9E6C2CBE0ABF481837651 /* UIView+LTSSupport.h */,
+				4E18C2BE2FF64857D2293B2784F0A673 /* UIView+LTSSupport.m */,
+			);
+			name = Refresh;
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		F6C8D97F73E3F1E048B6EB0F8E31B44D /* Lotus */ = {
+			isa = PBXGroup;
+			children = (
+				6B40F929392D75B3333C7B58D2F7DF36 /* Classes */,
+			);
+			name = Lotus;
+			path = Lotus;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8A12899766E853FEAD40EAFBD78B6592 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0643F98E8E10F6D57FCA8298FAC06321 /* Lotus-umbrella.h in Headers */,
+				3A158D30EADDC046B0732F779FA3B882 /* Lotus.h in Headers */,
+				D947035E4E5C633CEBFA1605CADD1E1D /* LotusHUD.h in Headers */,
+				C71D7767F0C5A3E0B72789FA4B34A50A /* LTSHeaderRefreshView.h in Headers */,
+				DAB42D70BF1F79F303F4E0977E925194 /* LTSMacro.h in Headers */,
+				D235B2001EF82D63BE7F2882598D1310 /* LTSPhotoLibrary.h in Headers */,
+				07A5E5713F9B326FD9E0F3502B8C33CF /* LTSRefreshView.h in Headers */,
+				1EE3EDEC351E35EF4CD2562F1FBCAEFE /* UIScrollView+LTSRefreshSupport.h in Headers */,
+				752CBBEBA592E6FD2C75478B04B00F92 /* UIView+LTSSupport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D757A9A509F151CEF336460CC1F41F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B9BA5F5905DCC9829D7B909C3FE7989 /* Pods-Lotus_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C41F012CBF7B7D554C5C7BA451F4E6C0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13415D859B6D40E7D2ACE51EB8AE79C6 /* Pods-Lotus_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1F3EE123DE6BF94B226DC25605AAE6C0 /* Pods-Lotus_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A176DE6F0B59331DD17C2952B3691F04 /* Build configuration list for PBXNativeTarget "Pods-Lotus_Tests" */;
+			buildPhases = (
+				640F82B46528E390B5729ED76748645B /* Sources */,
+				2C11F77FA1EAEB2CC357FC45AD65CF49 /* Frameworks */,
+				9D757A9A509F151CEF336460CC1F41F4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Lotus_Tests";
+			productName = "Pods-Lotus_Tests";
+			productReference = 6165744738B1605BA460B881B2946F04 /* Pods_Lotus_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7CC5488EC3B0FF4938A60E784B115B6F /* Lotus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED2D10E451FFECC5074BF2072D3065D2 /* Build configuration list for PBXNativeTarget "Lotus" */;
+			buildPhases = (
+				023A1C891469857F92111878F2E5F7D5 /* Sources */,
+				8A525D0402E59CC369C0D562D6746C53 /* Frameworks */,
+				8A12899766E853FEAD40EAFBD78B6592 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lotus;
+			productName = Lotus;
+			productReference = EA24C7CF9725088084EDFC08D5570931 /* Lotus.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B41D9BEA6EFF645F47DBAF54AC11DCE0 /* Pods-Lotus_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0584382E59D6B105BA8C8005C593DA9B /* Build configuration list for PBXNativeTarget "Pods-Lotus_Example" */;
+			buildPhases = (
+				C7E76FAD2098C3C8662F87EE4546579B /* Sources */,
+				1877C5FA5CA5533D8E6E803031AC5D8E /* Frameworks */,
+				C41F012CBF7B7D554C5C7BA451F4E6C0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADAA1FA89C4A5BEA75623DF7459D687D /* PBXTargetDependency */,
+			);
+			name = "Pods-Lotus_Example";
+			productName = "Pods-Lotus_Example";
+			productReference = 8C78AC12358DD7983E8F2397FC1E5091 /* Pods_Lotus_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = A32FAD01E7B9DD9E79BE155918B50851 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CC5488EC3B0FF4938A60E784B115B6F /* Lotus */,
+				B41D9BEA6EFF645F47DBAF54AC11DCE0 /* Pods-Lotus_Example */,
+				1F3EE123DE6BF94B226DC25605AAE6C0 /* Pods-Lotus_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		023A1C891469857F92111878F2E5F7D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EEC28EF68FB7950EA3D74D5819AF40A /* Lotus-dummy.m in Sources */,
+				4E8F1C6DD8F6D2BB66C21196D6630CC6 /* LotusHUD.m in Sources */,
+				31584D4C968EC231E42FA56BF79A8192 /* LTSHeaderRefreshView.m in Sources */,
+				14791292F401934CA46CA27C1442183D /* LTSPhotoLibrary.m in Sources */,
+				03C2079F54E02FAA96CB6288CE6F304B /* LTSRefreshView.m in Sources */,
+				2FED11994FCE60C0A045EC43FC704ECE /* README.md in Sources */,
+				FBA127C9C6B7C0CEFDBBC6D02DCAC901 /* UIScrollView+LTSRefreshSupport.m in Sources */,
+				63072F474A5009E814FC8AB138703D8F /* UIView+LTSSupport.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		640F82B46528E390B5729ED76748645B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E15BA71EF7361C48A0AAA769542877B5 /* Pods-Lotus_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7E76FAD2098C3C8662F87EE4546579B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43F8013B53D3722039DB4058F904F724 /* Pods-Lotus_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADAA1FA89C4A5BEA75623DF7459D687D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Lotus;
+			target = 7CC5488EC3B0FF4938A60E784B115B6F /* Lotus */;
+			targetProxy = B7F8886B9C49A465E20018D7F4FBCE69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E4A4508EB8FE8E333AB02FF02B68427 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63CA2D3307352ED643EE951601E0940C /* Pods-Lotus_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Lotus_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Lotus_Example/Pods-Lotus_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Lotus_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4476337711A32A19BCFBFAE609878B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 417A067F10DD8D8DD8DA35C798740628 /* Lotus.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Lotus/Lotus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Lotus/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Lotus/Lotus.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Lotus;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7124C0D34D95620790862BBD5C710546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4724E604B834503224A46CE8A2B0F4D0 /* Pods-Lotus_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Lotus_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Lotus_Tests/Pods-Lotus_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Lotus_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F067DA0060893722393217454FB5AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 417A067F10DD8D8DD8DA35C798740628 /* Lotus.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Lotus/Lotus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Lotus/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Lotus/Lotus.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Lotus;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D6E589934FD571F8F36D88DAD634E767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6777E3711C54D4B197B29900CF144406 /* Pods-Lotus_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Lotus_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Lotus_Example/Pods-Lotus_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Lotus_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D77F121568645A66F8FC4E965F20C511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41C8355B87C814DAE45130AAC7976EA1 /* Pods-Lotus_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Lotus_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Lotus_Tests/Pods-Lotus_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Lotus_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0584382E59D6B105BA8C8005C593DA9B /* Build configuration list for PBXNativeTarget "Pods-Lotus_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E4A4508EB8FE8E333AB02FF02B68427 /* Debug */,
+				D6E589934FD571F8F36D88DAD634E767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A176DE6F0B59331DD17C2952B3691F04 /* Build configuration list for PBXNativeTarget "Pods-Lotus_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D77F121568645A66F8FC4E965F20C511 /* Debug */,
+				7124C0D34D95620790862BBD5C710546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED2D10E451FFECC5074BF2072D3065D2 /* Build configuration list for PBXNativeTarget "Lotus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4476337711A32A19BCFBFAE609878B9C /* Debug */,
+				7F067DA0060893722393217454FB5AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
