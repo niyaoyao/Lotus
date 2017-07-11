@@ -9,7 +9,7 @@ Simple, but beautiful.
 Hover View
 
 ## Refresh
-Refresh ScrollView
+Refresh Component
 
 ## Image Picker
 
