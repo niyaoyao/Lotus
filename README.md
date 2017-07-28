@@ -13,6 +13,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+### Add repo
+To use Lotus UI components, you must add this repo to your local machine.
+
+```bash
+pod repo add Lotus https://github.com/niyaoyao/LotusSpec.git
+```
+
+### Pod install
 Lotus is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
