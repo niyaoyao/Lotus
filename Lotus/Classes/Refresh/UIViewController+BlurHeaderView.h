@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-static CGFloat kNavigationHeight = 64;
-static CGFloat kBackgroundImageHeight = 211;
-
 @interface UIViewController (BlurHeaderView)
 
+- (void)createHeaderViewWithFrame:(CGRect)frame;
 - (void)setupHeaderViewWithImage:(UIImage *)image;
+- (void)setupHeaderViewWithImageUrl:(NSString *)imageUrl;
 - (void)updateHeaderViewWithOffestY:(CGFloat)offsetY;
 
 @end

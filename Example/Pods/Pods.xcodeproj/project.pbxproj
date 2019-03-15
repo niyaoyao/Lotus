@@ -26,6 +26,8 @@
 		63072F474A5009E814FC8AB138703D8F /* UIView+LTSSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E18C2BE2FF64857D2293B2784F0A673 /* UIView+LTSSupport.m */; };
 		6B9BA5F5905DCC9829D7B909C3FE7989 /* Pods-Lotus_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8F21CA52F415DE2B7B8B5D1933A88AA /* Pods-Lotus_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		752CBBEBA592E6FD2C75478B04B00F92 /* UIView+LTSSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E297F6848F9E6C2CBE0ABF481837651 /* UIView+LTSSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C1CEF8B223BC29100EFB797 /* UIViewController+LTSToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C1CEF89223BC29100EFB797 /* UIViewController+LTSToast.h */; };
+		8C1CEF8C223BC29100EFB797 /* UIViewController+LTSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CEF8A223BC29100EFB797 /* UIViewController+LTSToast.m */; };
 		BA94FE41CD9B02A12BF9562A23FEF2A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		C71D7767F0C5A3E0B72789FA4B34A50A /* LTSHeaderRefreshView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E35692D77802005377F484AD29A8052 /* LTSHeaderRefreshView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D235B2001EF82D63BE7F2882598D1310 /* LTSPhotoLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 445BD4BE8100EA01C156F9A79B915F03 /* LTSPhotoLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -79,6 +81,8 @@
 		8AFC11F89034AB90FA7EA770509DE221 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C1CEF2F223BAA4200EFB797 /* UIView+ViewBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewBadge.h"; sourceTree = "<group>"; };
 		8C1CEF30223BAA4200EFB797 /* UIView+ViewBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewBadge.m"; sourceTree = "<group>"; };
+		8C1CEF89223BC29100EFB797 /* UIViewController+LTSToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LTSToast.h"; sourceTree = "<group>"; };
+		8C1CEF8A223BC29100EFB797 /* UIViewController+LTSToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LTSToast.m"; sourceTree = "<group>"; };
 		8C78AC12358DD7983E8F2397FC1E5091 /* Pods_Lotus_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E35692D77802005377F484AD29A8052 /* LTSHeaderRefreshView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LTSHeaderRefreshView.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -267,6 +271,8 @@
 			children = (
 				8AE66FD1A7116E597ED0A0C1FAEBD273 /* LotusHUD.h */,
 				FFC37684FE92A1A6078836B186CE2EC1 /* LotusHUD.m */,
+				8C1CEF89223BC29100EFB797 /* UIViewController+LTSToast.h */,
+				8C1CEF8A223BC29100EFB797 /* UIViewController+LTSToast.m */,
 			);
 			path = HUD;
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 				0E04E76D1F2B06DB00FA06AF /* UIViewController+BlurHeaderView.h in Headers */,
 				D947035E4E5C633CEBFA1605CADD1E1D /* LotusHUD.h in Headers */,
 				C71D7767F0C5A3E0B72789FA4B34A50A /* LTSHeaderRefreshView.h in Headers */,
+				8C1CEF8B223BC29100EFB797 /* UIViewController+LTSToast.h in Headers */,
 				DAB42D70BF1F79F303F4E0977E925194 /* LTSMacro.h in Headers */,
 				D235B2001EF82D63BE7F2882598D1310 /* LTSPhotoLibrary.h in Headers */,
 				07A5E5713F9B326FD9E0F3502B8C33CF /* LTSRefreshView.h in Headers */,
@@ -411,8 +418,10 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LTS;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = niyao;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -440,6 +449,7 @@
 			files = (
 				2EEC28EF68FB7950EA3D74D5819AF40A /* Lotus-dummy.m in Sources */,
 				4E8F1C6DD8F6D2BB66C21196D6630CC6 /* LotusHUD.m in Sources */,
+				8C1CEF8C223BC29100EFB797 /* UIViewController+LTSToast.m in Sources */,
 				31584D4C968EC231E42FA56BF79A8192 /* LTSHeaderRefreshView.m in Sources */,
 				0E04E76E1F2B06DB00FA06AF /* UIViewController+BlurHeaderView.m in Sources */,
 				14791292F401934CA46CA27C1442183D /* LTSPhotoLibrary.m in Sources */,

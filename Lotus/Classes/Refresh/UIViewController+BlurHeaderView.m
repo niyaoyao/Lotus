@@ -11,6 +11,12 @@
 
 const void *kBackgroundImageView = &kBackgroundImageView;
 const void *kBlurView = &kBlurView;
+const void *kGradientView = &kGradientView;
+const void *kGradientLayer = &kGradientLayer;
+const void *kHeaderViewWidth = &kHeaderViewWidth;
+const void *kHeaderViewHeight = &kHeaderViewHeight;
+const void *kHeaderViewOriginX = &kHeaderViewOriginX;
+const void *kHeaderViewOriginY = &kHeaderViewOriginY;
 
 @interface UIViewController ()
 
@@ -38,17 +44,75 @@ const void *kBlurView = &kBlurView;
     return objc_getAssociatedObject(self, kBlurView);
 }
 
+- (void)setGradientView:(UIView *)gradientView {
+    objc_setAssociatedObject(self, kGradientView, gradientView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIView *)gradientView {
+    return objc_getAssociatedObject(self, kGradientView);
+}
+
+- (void)setGradientLayer:(CAGradientLayer *)gradientLayer {
+    objc_setAssociatedObject(self, kGradientLayer, gradientLayer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (CAGradientLayer *)gradientLayer {
+    return objc_getAssociatedObject(self, kGradientLayer);
+}
+
+- (void)setHeaderViewWidth:(NSNumber *)headerViewWidth {
+    objc_setAssociatedObject(self, kHeaderViewWidth, headerViewWidth, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSNumber *)headerViewWidth {
+    return objc_getAssociatedObject(self, kHeaderViewWidth);
+}
+
+- (void)setHeaderViewHeight:(NSNumber *)headerViewHeight  {
+    objc_setAssociatedObject(self, kHeaderViewHeight, headerViewHeight, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSNumber *)headerViewHeight {
+    return objc_getAssociatedObject(self, kHeaderViewHeight);
+}
+
+- (void)setHeaderViewOriginX:(NSNumber *)headerViewOriginX {
+    objc_setAssociatedObject(self, kHeaderViewOriginX, headerViewOriginX, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSNumber *)headerViewOriginX {
+    return objc_getAssociatedObject(self, kHeaderViewOriginX);
+}
+
+- (void)setHeaderViewOriginY:(NSNumber *)headerViewOriginY {
+    objc_setAssociatedObject(self, kHeaderViewOriginY, headerViewOriginY, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSNumber *)headerViewOriginY {
+    return objc_getAssociatedObject(self, kHeaderViewOriginY);
+}
+
 #pragma mark - Private
-- (void)createViews {
-    CGFloat x = 0;
-    CGFloat y = 0;
-    CGFloat w = [UIScreen mainScreen].bounds.size.width;
-    CGFloat h = kBackgroundImageHeight;
-    CGRect frame = CGRectMake(x, y, w, h);
+- (void)createViewsWithFrame:(CGRect)frame {
+    self.headerViewWidth = @(frame.size.width);
+    self.headerViewHeight = @(frame.size.height);
+    self.headerViewOriginX = @(frame.origin.x);
+    self.headerViewOriginY = @(frame.origin.y);
+    
+    if (self.gradientView == nil) {
+        self.gradientView = [[UIView alloc] initWithFrame:frame];
+        self.gradientView.backgroundColor = [UIColor colorWithRed:0.0/255.0
+                                                            green:168.0/255.0
+                                                             blue:225.0/255.0
+                                                            alpha:1];
+        [self.view addSubview:self.gradientView];
+    }
+    
     if (self.backgroundImageView == nil) {
         self.backgroundImageView = [[UIImageView alloc] init];
         self.backgroundImageView.frame = frame;
-        self.backgroundImageView.contentMode = UIViewContentModeRedraw;
+        self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
+        self.backgroundImageView.clipsToBounds = YES;
         [self.view addSubview:self.backgroundImageView];
     }
     
@@ -61,49 +125,70 @@ const void *kBlurView = &kBlurView;
     }
 }
 
-#pragma mark - Navigation
-- (void)setupNavigation {
-    if (self.navigationController.navigationBar) {
-        UINavigationBar *navigationBar = self.navigationController.navigationBar;
-        [navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-        [navigationBar setShadowImage:[UIImage new]];
-    }
++ (CAGradientLayer *)gradientLayerWithContainer:(UIView *)containerView {
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.frame = containerView.bounds;
+    UIColor *startColor = [UIColor colorWithRed:0
+                                          green:140.0/255.0
+                                           blue:190.0/255.0
+                                          alpha:1];
+    UIColor *endColor = [UIColor clearColor];
+    gradientLayer.colors = @[
+                             (__bridge id)startColor.CGColor,
+                             (__bridge id)endColor.CGColor
+                             ];
+    
+    gradientLayer.startPoint = CGPointMake(0, 0);
+    gradientLayer.endPoint = CGPointMake(0, 0.9);
+    return gradientLayer;
 }
 
 #pragma mark - Public
+- (void)createHeaderViewWithFrame:(CGRect)frame {
+    [self createViewsWithFrame:frame];
+}
+
 - (void)setupHeaderViewWithImageUrl:(NSString *)imageUrl {
     
 }
 
 - (void)setupHeaderViewWithImage:(UIImage *)image {
-    [self setupNavigation];
-    [self createViews];
     self.backgroundImageView.image = image;
-    [self.view sendSubviewToBack:self.backgroundImageView];
 }
 
 - (void)updateHeaderViewWithOffestY:(CGFloat)offsetY {
-    CGFloat imageH = kBackgroundImageHeight;
-    CGFloat imageW = [UIScreen mainScreen].bounds.size.width;
+    CGFloat imageH = self.headerViewHeight.floatValue;
+    CGFloat imageW = self.headerViewWidth.floatValue;
     CGRect frame = CGRectZero;
+    frame.origin.y = self.headerViewOriginY.floatValue;
+    CGFloat navigationbarHeight = self.navigationController.navigationBar.bounds.size.height;
+    CGFloat topBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height + navigationbarHeight;
+    CGFloat backgroundImageHeight = self.headerViewHeight.floatValue;
+    CGFloat originY = self.headerViewOriginY.floatValue;
     CGFloat alpha = 0;
-    if (offsetY < 0) {
+    if (offsetY <= 0) {
         CGFloat totalOffset = imageH + ABS(offsetY);
         CGFloat rate = totalOffset / imageH;
-        frame = CGRectMake(-(imageW * rate - imageW) * 0.5, 0, imageW * rate, totalOffset);
-        alpha = ABS(offsetY)/kNavigationHeight > 1 ? 1 : ABS(offsetY)/kNavigationHeight;
+        frame = CGRectMake(-(imageW * rate - imageW) * 0.5, originY, imageW * rate, totalOffset);
+        alpha = ABS(offsetY)/topBarHeight > 1 ? 1 : ABS(offsetY)/topBarHeight;
     } else {
         frame.size.width = imageW;
         frame.size.height = imageH;
-        if (offsetY < kNavigationHeight) {
+        CGFloat limitOffset = backgroundImageHeight - topBarHeight - originY;
+        //        printf("limitOffset: %f\n", limitOffset);
+        //        printf("topBarHeight: %f\n", topBarHeight);
+        //        printf("originY: %f\n", originY);
+        //        printf("backgroundImageHeight: %f\n", backgroundImageHeight);
+        if (offsetY < limitOffset) {
             frame.origin.y -= offsetY;
         } else {
-            frame.origin.y = -kNavigationHeight;
+            frame.origin.y = -limitOffset;
         }
         offsetY -= 30;
-        alpha = offsetY/kNavigationHeight > 1 ? 1 : offsetY/kNavigationHeight;
+        alpha = offsetY/topBarHeight > 1 ? 1 : offsetY/topBarHeight;
     }
     self.backgroundImageView.frame = frame;
+    self.gradientView.frame = frame;
     self.blurView.alpha = alpha;
     self.blurView.frame = frame;
 }
