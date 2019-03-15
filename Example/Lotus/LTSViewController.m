@@ -7,10 +7,12 @@
 //
 
 #import "LTSViewController.h"
+#import "Lotus.h"
 
 @interface LTSViewController ()
 
 @property (nonatomic, strong) UIScrollView *srollView;
+@property (nonatomic, strong) UIView *testView;
 
 @end
 
@@ -20,13 +22,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+    [self.view addSubview:self.testView];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UIView *)testView {
+    if (!_testView) {
+        _testView = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 100, 50)];
+        _testView.backgroundColor = UIColor.blueColor;
+    }
+    return _testView;
 }
-
 @end

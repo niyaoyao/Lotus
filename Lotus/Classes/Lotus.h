@@ -11,3 +11,4 @@
 #import "UIScrollView+LTSRefreshSupport.h"
 #import "UIViewController+LTSToast.h"
 #import "UIViewController+BlurHeaderView.h"
+#import "UIView+ViewBadge.h"

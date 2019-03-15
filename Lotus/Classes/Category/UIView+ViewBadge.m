@@ -8,7 +8,6 @@
 
 #import "UIView+ViewBadge.h"
 #import <objc/runtime.h>
-#import <YYKit.h>
 
 const void *kBadgeLable = &kBadgeLable;
 const void *kBadgeView = &kBadgeView;
@@ -41,6 +40,11 @@ const void *kBadgeView = &kBadgeView;
     CGRect parentFrame = self.frame;
     CGSize badgeSize = CGSizeZero;
     UIFont *font = [UIFont boldSystemFontOfSize:8];
+    NSDictionary *attributes = @{NSFontAttributeName: font};
+    
+    CGSize size = [title boundingRectWithSize:CGSizeMake(MAXFLOAT, 20)
+                                      options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                   attributes:attributes context:nil].size;
     badgeSize = [title sizeForFont:font size:CGSizeMake(MAXFLOAT, 20) mode:NSLineBreakByCharWrapping];
     badgeSize.height += 4;
     badgeSize.width += 5;
@@ -60,7 +64,7 @@ const void *kBadgeView = &kBadgeView;
         self.badgeLable.hidden = YES;
     }
     self.badgeLable.text = title;
-    self.badgeLable.backgroundColor = [UIColor colorFromHexString:@"#FF484A"];
+    self.badgeLable.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:72.0/255.0  blue:27.0/255.0 alpha:1];
     self.badgeLable.textColor = [UIColor whiteColor];
     self.badgeLable.font = font;
     self.badgeLable.textAlignment = NSTextAlignmentCenter;
