@@ -10,6 +10,8 @@
 
 @interface UIView (ViewBadge)
 
+- (void)showBadge:(BOOL)showBadge title:(NSString *)title showBorder:(BOOL)showBorder font:(UIFont *)font width:(CGFloat)width height:(CGFloat)height;
+- (void)showBadge:(BOOL)showBadge title:(NSString *)title showBorder:(BOOL)showBorder font:(UIFont *)font;
 - (void)showBadge:(BOOL)showBadge title:(NSString *)title showBorder:(BOOL)showBorder;
 - (void)showBadge:(BOOL)showBadge title:(NSString *)title;
 - (void)showBadge:(BOOL)showBadge count:(NSInteger)count;

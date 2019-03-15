@@ -9,8 +9,7 @@
 #import "UIView+ViewBadge.h"
 #import <objc/runtime.h>
 
-const void *kBadgeLable = &kBadgeLable;
-const void *kBadgeView = &kBadgeView;
+const void *kLTSBadgeLable = &kLTSBadgeLable;
 
 @interface UIView ()
 
@@ -21,11 +20,11 @@ const void *kBadgeView = &kBadgeView;
 @implementation UIView (ViewBadge)
 
 - (void)setBadgeLable:(UILabel *)badgeLable {
-    objc_setAssociatedObject(self, kBadgeLable, badgeLable, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, kLTSBadgeLable, badgeLable, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UILabel *)badgeLable {
-    return objc_getAssociatedObject(self, kBadgeLable);
+    return objc_getAssociatedObject(self, kLTSBadgeLable);
 }
 
 - (void)showBadge:(BOOL)showBadge count:(NSInteger)count {
@@ -37,17 +36,34 @@ const void *kBadgeView = &kBadgeView;
 }
 
 - (void)showBadge:(BOOL)showBadge title:(NSString *)title showBorder:(BOOL)showBorder {
+    [self showBadge:showBadge title:title showBorder:showBorder font:[UIFont boldSystemFontOfSize:10]];
+}
+
+- (void)showBadge:(BOOL)showBadge title:(NSString *)title showBorder:(BOOL)showBorder font:(UIFont *)font {
+    [self showBadge:showBadge title:title showBorder:showBorder font:font width:0 height:0];
+}
+
+- (void)showBadge:(BOOL)showBadge title:(NSString *)title showBorder:(BOOL)showBorder font:(UIFont *)font width:(CGFloat)width height:(CGFloat)height {
     CGRect parentFrame = self.frame;
     CGSize badgeSize = CGSizeZero;
-    UIFont *font = [UIFont boldSystemFontOfSize:8];
     NSDictionary *attributes = @{NSFontAttributeName: font};
+    badgeSize = [title boundingRectWithSize:CGSizeMake(MAXFLOAT, 20)
+                                    options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                 attributes:attributes context:nil].size;
     
-    CGSize size = [title boundingRectWithSize:CGSizeMake(MAXFLOAT, 20)
-                                      options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                                   attributes:attributes context:nil].size;
-    badgeSize = [title sizeForFont:font size:CGSizeMake(MAXFLOAT, 20) mode:NSLineBreakByCharWrapping];
+    badgeSize.width = badgeSize.height > badgeSize.width ? badgeSize.height : badgeSize.width;
+    badgeSize.height = badgeSize.width;
+    badgeSize.width += 4;
     badgeSize.height += 4;
-    badgeSize.width += 5;
+    
+    if (width > 0) {
+        badgeSize.width = width;
+    }
+    
+    if (height > 0) {
+        badgeSize.height = height;
+    }
+    
     CGRect rect = CGRectZero;
     if (self.badgeLable == nil) {
         rect.origin.x = parentFrame.size.width - 1/2.0 * badgeSize.width;
@@ -58,11 +74,7 @@ const void *kBadgeView = &kBadgeView;
         [self addSubview:self.badgeLable];
     }
     
-    if (title.length > 0) {
-        self.badgeLable.hidden = !showBadge;
-    } else {
-        self.badgeLable.hidden = YES;
-    }
+    self.badgeLable.hidden = !showBadge;
     self.badgeLable.text = title;
     self.badgeLable.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:72.0/255.0  blue:27.0/255.0 alpha:1];
     self.badgeLable.textColor = [UIColor whiteColor];
@@ -76,7 +88,7 @@ const void *kBadgeView = &kBadgeView;
 }
 
 - (void)showBadge {
-    [self showBadge:YES count:1];
+    [self showBadge:YES title:@""];
 }
 
 @end
