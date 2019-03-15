@@ -77,6 +77,8 @@
 		84CB2B272FA9EBC4C274531FB00D325E /* UIScrollView+LTSRefreshSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+LTSRefreshSupport.m"; sourceTree = "<group>"; };
 		8AE66FD1A7116E597ED0A0C1FAEBD273 /* LotusHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LotusHUD.h; sourceTree = "<group>"; };
 		8AFC11F89034AB90FA7EA770509DE221 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C1CEF2F223BAA4200EFB797 /* UIView+ViewBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewBadge.h"; sourceTree = "<group>"; };
+		8C1CEF30223BAA4200EFB797 /* UIView+ViewBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewBadge.m"; sourceTree = "<group>"; };
 		8C78AC12358DD7983E8F2397FC1E5091 /* Pods_Lotus_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E35692D77802005377F484AD29A8052 /* LTSHeaderRefreshView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LTSHeaderRefreshView.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -160,6 +162,7 @@
 			children = (
 				11A0F50DF7C7E7048784EBF6ABA87E68 /* Lotus.h */,
 				DF869D13533A5E41746B1D9A7B4996AA /* LTSMacro.h */,
+				8C1CEF2E223BAA4200EFB797 /* Category */,
 				DCAE33DB341E8404904948B44C7989A7 /* Alert */,
 				EA0D3A89F532BFE9AED7FDCE497F65EE /* HUD */,
 				05E385C895F64157E0A6BA93F70CB28A /* ImagePicker */,
@@ -177,6 +180,15 @@
 				A32FAD01E7B9DD9E79BE155918B50851 /* Products */,
 				973F3558F0AA5107F9CB19C9FC75D532 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8C1CEF2E223BAA4200EFB797 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8C1CEF2F223BAA4200EFB797 /* UIView+ViewBadge.h */,
+				8C1CEF30223BAA4200EFB797 /* UIView+ViewBadge.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		973F3558F0AA5107F9CB19C9FC75D532 /* Targets Support Files */ = {

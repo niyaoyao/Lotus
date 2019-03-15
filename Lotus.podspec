@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Lotus'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A short description of Lotus.'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/niyaoyao/Lotus'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'niyaoyao' => 'ny.sunebear@gmail.com' }
+  s.author           = { 'niyaoyao' => 'nycode.jn@gmail.com' }
   s.source           = { :git => 'https://github.com/niyaoyao/Lotus.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
