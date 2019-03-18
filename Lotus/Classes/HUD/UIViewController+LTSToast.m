@@ -81,6 +81,10 @@ static const CGFloat kCornerRadius           = 5;
     [self showMessage:message interval:kShortDistance];
 }
 
+- (void)showMessage:(NSString *)message {
+    [self showMessageForShortDistance:message];
+}
+
 #pragma mark - Pravite Method
 
 + (CGRect)labelRectWithString:(NSString *)message font:(UIFont *)font {

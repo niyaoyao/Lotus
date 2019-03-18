@@ -44,6 +44,13 @@ NS_ASSUME_NONNULL_BEGIN
            interval:(NSTimeInterval)interval
          completion:(void (^ _Nullable )(void))showMessageCompletion;
 
+/**
+ 显示 Toast
+
+ @param message  消息
+ */
+- (void)showMessage:(NSString *)message;
+
 @end
 
 NS_ASSUME_NONNULL_END
